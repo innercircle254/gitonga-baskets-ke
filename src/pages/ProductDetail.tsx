@@ -23,8 +23,12 @@ const ProductDetail: React.FC = () => {
   return (
     <div className="container">
       <div className={styles.detailGrid}>
-        <div className={styles.imageSection} style={{ backgroundColor: basket.imageColor }}>
-          {/* Stylized placeholder */}
+        <div className={styles.imageSection}>
+          {basket.image ? (
+            <img src={basket.image} alt={basket.name} className={styles.productImage} />
+          ) : (
+            <div className={styles.imagePlaceholder} style={{ backgroundColor: basket.imageColor }}></div>
+          )}
         </div>
         <div className={styles.infoSection}>
           <span className={styles.category}>{basket.category}</span>

@@ -23,7 +23,13 @@ const Cart: React.FC = () => {
         <div className={styles.items}>
           {cart.map(item => (
             <div key={item.id} className={styles.item}>
-              <div className={styles.itemImage} style={{ backgroundColor: item.imageColor }}></div>
+              <div className={styles.itemImage}>
+                {item.image ? (
+                  <img src={item.image} alt={item.name} className={styles.thumbImage} />
+                ) : (
+                  <div className={styles.imagePlaceholder} style={{ backgroundColor: item.imageColor }}></div>
+                )}
+              </div>
               <div className={styles.itemInfo}>
                 <h3>{item.name}</h3>
                 <p>KES {item.price.toLocaleString()}</p>
