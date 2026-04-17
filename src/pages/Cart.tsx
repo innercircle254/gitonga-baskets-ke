@@ -34,7 +34,7 @@ const Cart: React.FC = () => {
       <div className={`container ${styles.empty}`}>
         <h2>Your cart is empty</h2>
         <p>Go to the shop to find something beautiful.</p>
-        <a href="/shop" className="btn btn-primary">Continue Shopping</a>
+        <Link to="/shop" className="btn btn-primary">Continue Shopping</Link>
       </div>
     );
   }
@@ -119,6 +119,11 @@ const Cart: React.FC = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+export default Cart;
+</div>
   );
 };
 
