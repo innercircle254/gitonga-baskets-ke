@@ -76,7 +76,7 @@ const Cart: React.FC = () => {
             <span>KES {total.toLocaleString()}</span>
           </div>
           <div className={styles.row}>
-            <span>Delivery (Nairobi)</span>
+            <span>Delivery (Kericho)</span>
             <span>KES 300</span>
           </div>
           <div className={`${styles.row} ${styles.total}`}>

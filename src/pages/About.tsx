@@ -11,10 +11,10 @@ const About: React.FC = () => {
       >
         <h1 style={{ fontSize: '3.5rem', marginBottom: '2rem', textAlign: 'center' }}>Our Story</h1>
         <p style={{ fontSize: '1.2rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-          Gitonga Baskets KE was born from a passion for preserving traditional Kenyan weaving techniques while bringing them into modern homes.
+          Gitonga Baskets KE is deeply rooted in the lush hills of **Kericho, Kenya**. We are dedicated to preserving the traditional Kipsigis weaving techniques while bringing them into modern homes worldwide.
         </p>
         <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-          Our artisans in Kericho and beyond use sustainable materials like sisal and banana fiber to create functional pieces of art. Every basket tells a story of heritage, skill, and empowerment.
+          Our artisans use sustainable materials like sisal and banana fiber harvested directly from the Kericho region. Every basket tells a story of heritage, skill, and the resilient spirit of our local community.
         </p>
         
         <div style={{ marginTop: '4rem', padding: '3rem', background: '#F5DEB3', borderRadius: '20px' }}>
