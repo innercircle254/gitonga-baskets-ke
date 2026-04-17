@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4>Contact</h4>
-            <p>Nairobi, Kenya</p>
-            <p>Email: hello@gitongabaskets.co.ke</p>
+            <p>Kericho, Kenya</p>
+            <p>Email: omixsystems@gmail.com</p>
           </div>
         </div>
         <div className={styles.bottom}>
