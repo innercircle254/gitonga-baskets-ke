@@ -22,6 +22,11 @@ const Footer: React.FC = () => {
             <h4>Contact</h4>
             <p>Kericho, Kenya</p>
             <p>Email: omixsystems@gmail.com</p>
+            <p style={{ marginTop: '0.5rem' }}>
+              <a href="https://wa.me/254713988224" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span>WhatsApp: 0713 988224</span>
+              </a>
+            </p>
           </div>
         </div>
         <div className={styles.bottom}>

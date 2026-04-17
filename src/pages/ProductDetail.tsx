@@ -42,7 +42,10 @@ const ProductDetail: React.FC = () => {
             <p><strong>Materials:</strong> {basket.materials.join(', ')}</p>
             <p><strong>Available Colors:</strong> {basket.colors.join(', ')}</p>
           </div>
-          <button onClick={handleAddToCart} className="btn btn-primary">Add to Cart</button>
+          <button onClick={handleAddToCart} className="btn btn-primary" style={{ marginRight: '1rem' }}>Add to Cart</button>
+          <a href={`https://wa.me/254713988224?text=Hi, I'm interested in the ${basket.name}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'inline-block' }}>
+            Inquire on WhatsApp
+          </a>
         </div>
       </div>
     </div>
