@@ -69,7 +69,7 @@ const Home: React.FC = () => {
         <div className="container">
           <h2 className={styles.sectionTitle}>Featured Designs</h2>
           <div className={styles.productGrid}>
-            {featured.map((basket, idx) => (
+            {featured.map((basket) => (
               <BasketCard key={basket.id} basket={basket} />
             ))}
           </div>
