@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './ProductDetail.module.css';
 
 const About: React.FC = () => {
   return (
