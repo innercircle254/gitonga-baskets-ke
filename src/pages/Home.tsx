@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { baskets } from '../mockData';
 import BasketCard from '../components/BasketCard';
+import { useLoyalty } from '../LoyaltyContext';
 import styles from './Home.module.css';
 
 const Home: React.FC = () => {
   const featured = baskets.slice(0, 3);
+  const { viewedIds, questCompleted, rewardCode } = useLoyalty();
+  const progress = Math.min((viewedIds.length / 3) * 100, 100);
 
   return (
     <div className={styles.home}>
