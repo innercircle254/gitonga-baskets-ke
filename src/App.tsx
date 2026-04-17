@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './CartContext';
+import { LoyaltyProvider } from './LoyaltyContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,8 +12,9 @@ import About from './pages/About';
 
 const App: React.FC = () => {
   return (
-    <CartProvider>
-      <Router>
+    <LoyaltyProvider>
+      <CartProvider>
+        <Router>
         <div className="app-wrapper" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Navbar />
           <main style={{ flex: 1 }}>

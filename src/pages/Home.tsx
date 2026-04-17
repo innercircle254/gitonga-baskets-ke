@@ -86,11 +86,20 @@ const Home: React.FC = () => {
             whileHover={{ rotate: [0, -1, 1, -1, 0] }}
           >
             <h3>Daily Quest: Basket Explorer</h3>
-            <p>View 3 different baskets to earn a "Sisal Enthusiast" badge!</p>
-            <div className={styles.progressBar}>
-              <div className={styles.progress} style={{ width: '33%' }}></div>
-            </div>
-            <span>1/3 Baskets viewed</span>
+            {questCompleted ? (
+              <div className={styles.success}>
+                <p>Congratulations! Use code <strong>{rewardCode}</strong> for 10% off!</p>
+                <div className={styles.badge} style={{ marginTop: '1rem', color: '#8B4513', fontWeight: 'bold' }}>🏅 Sisal Enthusiast Badge Unlocked!</div>
+              </div>
+            ) : (
+              <>
+                <p>View 3 different baskets to earn a "Sisal Enthusiast" badge!</p>
+                <div className={styles.progressBar}>
+                  <div className={styles.progress} style={{ width: `${progress}%` }}></div>
+                </div>
+                <span>{viewedIds.length}/3 Baskets viewed</span>
+              </>
+            )}
           </motion.div>
         </div>
       </section>

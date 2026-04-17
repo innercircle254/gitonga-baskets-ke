@@ -2,14 +2,22 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { baskets } from '../mockData';
 import { useCart } from '../CartContext';
+import { useLoyalty } from '../LoyaltyContext';
 import styles from './ProductDetail.module.css';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  const { trackView } = useLoyalty();
   
   const basket = baskets.find(b => b.id === id);
+
+  React.useEffect(() => {
+    if (basket) {
+      trackView(basket.id);
+    }
+  }, [basket, trackView]);
 
   if (!basket) {
     return <div className="container">Product not found.</div>;
