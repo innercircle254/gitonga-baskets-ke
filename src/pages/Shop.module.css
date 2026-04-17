@@ -1,0 +1,21 @@
+.shopHeader {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.shopHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shopHeader p {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
