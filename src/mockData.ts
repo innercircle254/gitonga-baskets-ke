@@ -7,7 +7,10 @@ export interface Basket {
   colors: string[];
   materials: string[];
   imageColor: string; // Used for stylized placeholder
+  image?: string;
 }
+
+import gitongaImage from './assets/gitonga5.jpg';
 
 export const baskets: Basket[] = [
   {
@@ -18,7 +21,8 @@ export const baskets: Basket[] = [
     category: 'Nesting',
     colors: ['Natural', 'Earthy Brown'],
     materials: ['Sisal', 'Banana Fiber'],
-    imageColor: '#D2B48C'
+    imageColor: '#D2B48C',
+    image: gitongaImage
   },
   {
     id: '2',

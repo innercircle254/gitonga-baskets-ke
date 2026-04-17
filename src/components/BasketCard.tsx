@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import type { Basket } from '../mockData';
 import styles from './BasketCard.module.css';
 
@@ -9,9 +10,20 @@ interface Props {
 
 const BasketCard: React.FC<Props> = ({ basket }) => {
   return (
-    <div className={styles.card}>
+    <motion.div 
+      className={styles.card}
+      whileHover={{ y: -10 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <Link to={`/product/${basket.id}`}>
-        <div className={styles.imagePlaceholder} style={{ backgroundColor: basket.imageColor }}>
+        <div className={styles.imageContainer}>
+          {basket.image ? (
+            <img src={basket.image} alt={basket.name} className={styles.basketImage} />
+          ) : (
+            <div className={styles.imagePlaceholder} style={{ backgroundColor: basket.imageColor }}></div>
+          )}
           <div className={styles.overlay}>View Details</div>
         </div>
       </Link>
@@ -20,7 +32,7 @@ const BasketCard: React.FC<Props> = ({ basket }) => {
         <h3 className={styles.name}>{basket.name}</h3>
         <p className={styles.price}>KES {basket.price.toLocaleString()}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
