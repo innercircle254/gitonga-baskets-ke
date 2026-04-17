@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../CartContext';
 import { Trash2, Plus, Minus, Copy, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import styles from './Cart.module.css';
 
 const Cart: React.FC = () => {
@@ -119,11 +120,6 @@ const Cart: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Cart;
-</div>
   );
 };
 
