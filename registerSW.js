@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/gitonga-baskets-ke/sw.js', { scope: '/gitonga-baskets-ke/' })})}
